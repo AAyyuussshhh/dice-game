@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dice Duel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+<div class="container">
+  <h1>DICE DUEL</h1>
+  <p class="subtitle">Roll higher than the CPU to score</p>
+
+  <div class="scoreboard">
+    <div class="player-score you">
+      <div class="label">You</div>
+      <div class="score" id="yourScore">0</div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="player-score cpu">
+      <div class="label">CPU</div>
+      <div class="score" id="cpuScore">0</div>
+    </div>
+  </div>
+
+  <div class="dice-area">
+    <div class="dice-wrapper">
+      <div class="dice-label">Your Roll</div>
+      <div class="dice you-dice" id="yourDice">
+        <div class="dot tl" id="y-tl"></div>
+        <div class="dot tr" id="y-tr"></div>
+        <div class="dot ml" id="y-ml"></div>
+        <div class="dot mc" id="y-mc"></div>
+        <div class="dot mr" id="y-mr"></div>
+        <div class="dot bl" id="y-bl"></div>
+        <div class="dot br" id="y-br"></div>
+      </div>
+      <div class="dice-value you-dice-value" id="yourValue">–</div>
+    </div>
+
+    <div class="dice-wrapper">
+      <div class="dice-label">CPU Roll</div>
+      <div class="dice cpu-dice" id="cpuDice">
+        <div class="dot tl" id="c-tl"></div>
+        <div class="dot tr" id="c-tr"></div>
+        <div class="dot ml" id="c-ml"></div>
+        <div class="dot mc" id="c-mc"></div>
+        <div class="dot mr" id="c-mr"></div>
+        <div class="dot bl" id="c-bl"></div>
+        <div class="dot br" id="c-br"></div>
+      </div>
+      <div class="dice-value cpu-dice-value" id="cpuValue">–</div>
+    </div>
+  </div>
+
+  <div class="result-banner">
+    <div class="result-text" id="resultText"></div>
+  </div>
+
+  <div class="controls">
+    <button id="rollBtn">🎲 Roll</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <p class="history-title">Round History</p>
+  <div class="history" id="history"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
